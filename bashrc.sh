@@ -1,5 +1,5 @@
 # 自動啟動 tmux 並附加到預設會話
-tmux attach-session -d -t default || tmux new-session -d -s default
+tmux attach-session -t default || tmux new-session -s default
 # if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 #   tmux attach-session -t default || tmux new-session -s default
 # fi
@@ -187,20 +187,4 @@ PS0="\n"
 
 # DISPLAY=localhost:10.0
 
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/kagariet01/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/kagariet01/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/kagariet01/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/kagariet01/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
