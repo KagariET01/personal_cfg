@@ -1,6 +1,6 @@
 # 自動啟動 tmux 並附加到預設會話
-tmux attach-session -t default || tmux new-session -s default
-tmux set-option -g remain-on-exit on
+tmux new-session
+# tmux attach-session -t default || tmux new-session -s default
 # if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 #   tmux attach-session -t default || tmux new-session -s default
 # fi
